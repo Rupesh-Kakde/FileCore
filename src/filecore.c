@@ -498,7 +498,7 @@ void LsFile()
     PINODE temp = head;
 
     printf("-----------------------------------------------------------------\n");
-    printf("----------- FileCore Files Information--------------------\n");
+    printf("---------------- FileCore Files Information ---------------------\n");
     printf("-----------------------------------------------------------------\n");
 
      while(temp != NULL)
@@ -528,7 +528,7 @@ void LsFile_All()
     PINODE temp = head;
 
     printf("-----------------------------------------------------------------\n");
-    printf("-----------FileCore Files Information--------------------\n");
+    printf("--------------- FileCore Files Information ----------------------\n");
     printf("-----------------------------------------------------------------\n");
 
      while(temp != NULL)
@@ -572,8 +572,8 @@ int stat_file(
         if (strcmp(temp -> FileName,name) == 0)
         {
          printf("-----------------------------------------------------------------\n");
-         printf("-----------Statistical Information of File----------------------\n");
-         printf("----------------------------------------------------------------\n");
+         printf("----------- Statistical Information of File----------------------\n");
+         printf("-----------------------------------------------------------------\n");
 
         printf("File name : %s\n",temp->FileName);
         printf("Inode number : %d\n", temp ->InodeNumber);
@@ -826,7 +826,7 @@ int main()
     StartAuxillaryDataInitialization();
 
     printf("-----------------------------------------------------------------\n");
-    printf("-----------FileCore Started Successfully--------------------\n");
+    printf("-------------- FileCore Started Successfully--------------------\n");
     printf("-----------------------------------------------------------------\n");
 
     //Infinite Listining Shell
