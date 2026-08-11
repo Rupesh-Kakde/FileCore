@@ -584,7 +584,7 @@ int stat_file(
         if (strcmp(temp -> FileName,name) == 0)
         {
          printf("-----------------------------------------------------------------\n");
-         printf("----------- Statistical Information of File----------------------\n");
+         printf("----------- Statistical Information of File ---------------------\n");
          printf("-----------------------------------------------------------------\n");
 
         printf("File name : %s\n",temp->FileName);
