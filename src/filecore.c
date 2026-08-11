@@ -268,7 +268,7 @@ void StartAuxillaryDataInitialization()
 void DisplayHelp()
 {
     printf("-------------------------------------------------------------\n");
-    printf("--------------FileCore Help Page ---------------------------\n");
+    printf("-------------- FileCore Help Page ---------------------------\n");
     printf("-------------------------------------------------------------\n");
 
     printf("man : It is used to display manual page\n");
