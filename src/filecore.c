@@ -268,7 +268,7 @@ void StartAuxillaryDataInitialization()
 void DisplayHelp()
 {
     printf("-------------------------------------------------------------\n");
-    printf("-----------FileCore Help Page---------------------------\n");
+    printf("--------------FileCore Help Page ---------------------------\n");
     printf("-------------------------------------------------------------\n");
 
     printf("man : It is used to display manual page\n");
@@ -331,17 +331,29 @@ void ManPageDisplay(char Name[])
         printf("File_Name : Name of file that we want to delete\n");
     }
      else if(strcmp(Name,"stat") == 0)
-    {
-        printf("About : It is used to get information of file\n");
-        printf("Usage : stat File_name\n");
-        
-        printf("File_Name : Name of file whose information should be fetched\n");
+{
+    printf("About : It is used to get information of file\n");
+    printf("Usage : stat File_name\n");
     
-    }
-    else
-    {
-        printf("No manual entry found for %s\n",Name);
-    }
+    printf("File_Name : Name of file whose information should be fetched\n");
+}
+else if(strcmp(Name,"write") == 0)
+{
+    printf("About : It is used to write data into the file\n");
+    printf("Usage : write File_Descriptor\n");
+    printf("File_Descriptor : Descriptor of the file into which data should be written\n");
+}
+else if(strcmp(Name,"read") == 0)
+{
+    printf("About : It is used to read data from the file\n");
+    printf("Usage : read File_Descriptor Size\n");
+    printf("File_Descriptor : Descriptor of the file from which data should be read\n");
+    printf("Size : Number of bytes to read from the file\n");
+}
+else
+{
+    printf("No manual entry found for %s\n",Name);
+}
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -906,14 +918,18 @@ int main()
     }
     //FileCore : > Unlink Ganesh.txt
     else if (strcmp(Command[0],"unlink") == 0)
-    {
-       iRet =  unlink_file(Command[1]);
+{
+    iRet = unlink_file(Command[1]);
 
-       if(iRet == ERR_FILE_NOT_EXIST)
-       {
+    if(iRet == ERR_FILE_NOT_EXIST)
+    {
         printf("Error : File not Exist\n");
-       }
     }
+    else
+    {
+        printf("File '%s' successfully deleted\n", Command[1]);
+    }
+}
     //FileCore : > write 1
     else if (strcmp(Command[0],"write") == 0)
     {
