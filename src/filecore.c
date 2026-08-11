@@ -826,7 +826,7 @@ int main()
     StartAuxillaryDataInitialization();
 
     printf("-----------------------------------------------------------------\n");
-    printf("-------------- FileCore Started Successfully--------------------\n");
+    printf("-------------- FileCore Started Successfully --------------------\n");
     printf("-----------------------------------------------------------------\n");
 
     //Infinite Listining Shell
